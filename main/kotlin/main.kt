@@ -1,3 +1,5 @@
+import pemain.SuitPemain
+
 fun main(args: Array<String>) {
     println("""     
         
@@ -10,24 +12,33 @@ fun main(args: Array<String>) {
 
 
     println("1. Masukan Pemain 1: ")
-    val pemainSatu = readLine()
-    val suitPemainSatu= SuitPemainSatu()
+    val pemainSatu = readLine()?.toString()!!
+    val suitPemainSatu= SuitPemain()
+
+    suitPemainSatu.aksiPemainSatu(pemainSatu)
+
 
 
 
     println("2. Masukan Pemain 2: ")
-    val pemainDua = readLine()
-    val suitPemainDua= SuitPemainDua()
+    val pemainDua = readLine()?.toString()!!
+    val suitPemainDua = SuitPemain()
+    suitPemainDua.aksiPemainDua(pemainDua)
 
 
-    val result : String
-    println("""
-        Hasil :
-        $pemainSatu
-    """.trimIndent() )
+//    val result : String
+//    println("""
+//        Hasil :
+//        $pemainSatu
+//    """.trimIndent() )
+
+
 
 
 }
+
+
+
 
 
 
