@@ -13,17 +13,18 @@ fun main(args: Array<String>) {
 
     println("1. Masukan Pemain 1: ")
     val pemainSatu = readLine()?.toString()!!
-    val suitPemainSatu= SuitPemain()
-
-    suitPemainSatu.aksiPemainSatu(pemainSatu)
-
-
+    val suitPemainSatu = SuitPemain()
+    with(suitPemainSatu) {
+        aksiPemain(pemainSatu)
+    }
 
 
     println("2. Masukan Pemain 2: ")
     val pemainDua = readLine()?.toString()!!
     val suitPemainDua = SuitPemain()
-    suitPemainDua.aksiPemainDua(pemainDua)
+    suitPemainSatu.aksiPemain(pemainDua)
+
+
 
 
 //    val result : String
@@ -36,12 +37,3 @@ fun main(args: Array<String>) {
 
 
 }
-
-
-
-
-
-
-
-
-
