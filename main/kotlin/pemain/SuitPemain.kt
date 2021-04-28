@@ -2,27 +2,29 @@ package pemain
 
 class SuitPemain() {
 
-    val batu : String = "Batu"
-    val kertas : String = "Kertas"
-    val gunting : String = "Gunting"
+    val batu : String = "batu"
+    val kertas : String = "kertas"
+    val gunting : String = "gunting"
+
+    val draw : String = "Draw"
 
 
-    fun aksiPemain( pemainSatu1: String ="",  pemainDua: String ="" ){
+    fun aksiPemain( pemainSatu: String? ="",  pemainDua: String? ="" ){
 
 
 
         val suitPemain: Array<String> = arrayOf("Draw", "Pemain 2 Menang", "Pemain 1 Menang")
 
-        if (pemainSatu1 =="" && pemainDua =="") {
+        if (pemainSatu == batu && pemainDua == batu) {
             println("=====================================")
-            println("Hasil: $suitPemain[0]")
+            println("Hasil: $draw")
             println("=====================================")
 
-        } else if (pemainSatu1 == batu && pemainDua == kertas ) {
+        } else if (pemainSatu == batu && pemainDua == kertas ) {
             println("=====================================")
             println("Hasil: $suitPemain[1]")
             println("=====================================")
-        } else if (pemainSatu1 == batu && pemainDua == gunting ) {
+        } else if (pemainSatu == batu && pemainDua == gunting ) {
             println("=====================================")
             println("Hasil: $suitPemain[2]")
             println("=====================================")

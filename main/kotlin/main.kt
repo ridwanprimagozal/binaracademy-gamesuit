@@ -12,19 +12,16 @@ fun main(args: Array<String>) {
 
 
     println("1. Masukan Pemain 1: ")
-    val pemainSatu = readLine()?.toString()!!
+    val pemainSatu = readLine()
     val suitPemainSatu = SuitPemain()
-    if ( pemainSatu != null){
+
         suitPemainSatu.aksiPemain(pemainSatu)
-    }
 
 
     println("2. Masukan Pemain 2: ")
-    val pemainDua = readLine()?.toString()!!
+    val pemainDua = readLine()
     val suitPemainDua = SuitPemain()
-    if ( pemainDua != null){
-        suitPemainSatu.aksiPemain(pemainDua)
-    }
+    suitPemainSatu.aksiPemain(pemainDua)
 
 
 
