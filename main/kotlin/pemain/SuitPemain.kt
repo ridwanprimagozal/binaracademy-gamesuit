@@ -2,31 +2,36 @@ package pemain
 
 class SuitPemain() {
 
-    val batu : String = "Batu.toLowerCase()"
-    val kertas : String = "Kertas.toLowerCase()"
-    val gunting : String = "Gunting.toLowerCase()"
+    val batu : String = "Batu"
+    val kertas : String = "Kertas"
+    val gunting : String = "Gunting"
 
-    fun aksiPemain( pemainSatu: String,  pemainDua: String) {
+
+    fun aksiPemain( pemainSatu1: String ="",  pemainDua: String ="" ){
+
+
 
         val suitPemain: Array<String> = arrayOf("Draw", "Pemain 2 Menang", "Pemain 1 Menang")
 
-        if (pemainSatu == pemainDua) {
+        if (pemainSatu1 =="" && pemainDua =="") {
             println("=====================================")
-            println(suitPemain[0])
+            println("Hasil: $suitPemain[0]")
             println("=====================================")
 
-        } else if (pemainSatu == batu && pemainDua == kertas  ) {
+        } else if (pemainSatu1 == batu && pemainDua == kertas ) {
             println("=====================================")
-            println(suitPemain[1])
+            println("Hasil: $suitPemain[1]")
             println("=====================================")
-        } else if (pemainSatu == batu && pemainDua == gunting ) {
+        } else if (pemainSatu1 == batu && pemainDua == gunting ) {
             println("=====================================")
-            println(suitPemain[2])
+            println("Hasil: $suitPemain[2]")
             println("=====================================")
 
         }
 
     }
+
+
 
 
 //    private fun swite(){

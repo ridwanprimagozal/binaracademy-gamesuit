@@ -14,13 +14,18 @@ fun main(args: Array<String>) {
     println("1. Masukan Pemain 1: ")
     val pemainSatu = readLine()?.toString()!!
     val suitPemainSatu = SuitPemain()
-    suitPemainSatu.aksiPemain(pemainSatu)
+    if ( pemainSatu != null){
+        suitPemainSatu.aksiPemain(pemainSatu)
+    }
 
 
     println("2. Masukan Pemain 2: ")
     val pemainDua = readLine()?.toString()!!
     val suitPemainDua = SuitPemain()
-    suitPemainSatu.aksiPemain(pemainDua)
+    if ( pemainDua != null){
+        suitPemainSatu.aksiPemain(pemainDua)
+    }
+
 
 
 
