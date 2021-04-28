@@ -14,9 +14,7 @@ fun main(args: Array<String>) {
     println("1. Masukan Pemain 1: ")
     val pemainSatu = readLine()?.toString()!!
     val suitPemainSatu = SuitPemain()
-    with(suitPemainSatu) {
-        aksiPemain(pemainSatu)
-    }
+    suitPemainSatu.aksiPemain(pemainSatu)
 
 
     println("2. Masukan Pemain 2: ")
