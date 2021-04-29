@@ -1,37 +1,112 @@
 package pemain
 
+var seri : String =""
+const val menangPlayer1 = "Player 1 Menang"
+const val menangPlayer2 = "Player 2 Menang"
+
 class SuitPemain() {
 
-    val batu : String = "batu"
-    val kertas : String = "kertas"
-    val gunting : String = "gunting"
 
-    val draw : String = "Draw"
+    fun aksiPemainSatu(pemainSatu: String) {
 
-
-    fun aksiPemain( pemainSatu: String? ="",  pemainDua: String? ="" ){
-
-
-
-        val suitPemain: Array<String> = arrayOf("Draw", "Pemain 2 Menang", "Pemain 1 Menang")
-
-        if (pemainSatu == batu && pemainDua == batu) {
-            println("=====================================")
-            println("Hasil: $draw")
-            println("=====================================")
-
-        } else if (pemainSatu == batu && pemainDua == kertas ) {
-            println("=====================================")
-            println("Hasil: $suitPemain[1]")
-            println("=====================================")
-        } else if (pemainSatu == batu && pemainDua == gunting ) {
-            println("=====================================")
-            println("Hasil: $suitPemain[2]")
-            println("=====================================")
-
+        if (pemainSatu.equals("Batu",true)) {
+            seri = "DRAW"
         }
 
     }
+
+    fun aksiPemainDua(pemainDua: String) {
+
+        if (pemainDua.equals("Batu",true)) {
+            hasilSuitDraw("Draw")
+        }
+    }
+
+
+    fun hasilSuitDraw(hasil:String) {
+
+        when (hasil) {
+            "Draw" -> {
+
+                PemainSatuDuaDraw().pemainSatuDuaDraw()
+
+            }
+            else -> {
+                println("tidak ada")
+            }
+        }
+
+
+
+
+    }
+
+}
+
+
+
+
+//    val batu: String = "batu"
+//    val kertas: String = "kertas"
+//    val gunting: String = "gunting"
+//
+//
+//    fun aksiPemainSatu( pemainSatu: String? = ""){
+//
+//
+//    }
+//
+//    fun aksiPemainDua( pemainDua: String? = ""){
+//
+//        if (pemainDua.equals(batu)) {
+//            hasil()
+//        } else if (pemainDua.equals(kertas)) {
+//            result()
+//        } else if (pemainDua.equals(gunting)) {
+//            sama()
+//        }
+//
+//    }
+//
+//    fun hasil() {
+//
+//        println("=====================================")
+//        println("Hasil: $SERI")
+//        println("=====================================")
+//
+//    }
+//
+//    fun result() {
+//
+//        println("=====================================")
+//        println("Hasil: $MENANGPLAYER1")
+//        println("=====================================")
+//
+//    }
+//
+//    fun sama() {
+//
+//        println("=====================================")
+//        println("Hasil: $MENANGPLAYER2")
+//        println("=====================================")
+//
+//    }
+
+
+//    fun isItTie (pemainSatu : String, pemainDua: String) : Boolean {
+//        return pemainSatu == pemainDua
+//
+//
+//    }
+//
+//    fun checkIsPlayerWin(pemainSatu : String?="", pemainDua: String?="") : Boolean {
+//        return (pemainSatu == "gunting" && pemainDua == "kertas") ||
+//                (pemainSatu == "batu" && pemainDua == "gunting") ||
+//                (pemainSatu == "kertas" && pemainDua == "batu")
+//
+//
+//    }
+
 
 
 
@@ -41,15 +116,6 @@ class SuitPemain() {
 //        val kertas : String = "Kertas.toLowerCase()"
 //        val gunting : String = "Gunting.toLowerCase()"
 //    }
-
-
-
-
-}
-
-
-
-
 
 
 //    fun aksiPemainDua(pemainDua: String){
