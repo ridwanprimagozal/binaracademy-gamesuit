@@ -1,24 +1,33 @@
 package pemain
 
-var seri : String =""
-const val menangPlayer1 = "Player 1 Menang"
-const val menangPlayer2 = "Player 2 Menang"
+var seri : String = "DRAW!"
+var menangPlayerSatuTypeA: String ="Pemain 1 MENANG!"
+var menangPlayerSatuTypeB : String ="Pemain 2 MENANG!"
 
 class SuitPemain() {
 
 
+
     fun aksiPemainSatu(pemainSatu: String) {
 
-        if (pemainSatu.equals("Batu",true)) {
-            seri = "DRAW"
+        if (pemainSatu.equals("Gunting",true)) {
+            seri
+        } else if (pemainSatu.equals("Gunting" ,true)){
+            menangPlayerSatuTypeA
+        } else if (pemainSatu.equals("Gunting", true)){
+            menangPlayerSatuTypeB
         }
 
     }
 
     fun aksiPemainDua(pemainDua: String) {
 
-        if (pemainDua.equals("Batu",true)) {
+        if (pemainDua.equals("Gunting",true)) {
             hasilSuitDraw("Draw")
+        } else if (pemainDua.equals("Kertas", true)){
+            hasilSuitDraw("PemainSatuMenang")
+        } else if (pemainDua.equals("Batu",true)){
+            hasilSuitDraw("PemainSatuMenangVariasi")
         }
     }
 
@@ -27,20 +36,19 @@ class SuitPemain() {
 
         when (hasil) {
             "Draw" -> {
-
                 PemainSatuDuaDraw().pemainSatuDuaDraw()
-
+            }
+            "PemainSatuMenang" -> {
+                PemainSatuMenangTypeA().pemainSatuMenangTypeA()
+            }
+            "PemainSatuMenangVariasi" -> {
+                PemainSatuMenangTypeB().pemainSatuMenangTypeB()
             }
             else -> {
                 println("tidak ada")
             }
         }
-
-
-
-
     }
-
 }
 
 
