@@ -1,10 +1,11 @@
 import pemain.SuitPemain
 
 fun main(args: Array<String>) {
+
     println("""     
-        
+    
         =============================================
-        Aplikasi Penghitung Rata Rata Nilai Mahasiswa
+        GAME SUIT KOTLIN VERSION
         =============================================
         
     """.trimIndent())
