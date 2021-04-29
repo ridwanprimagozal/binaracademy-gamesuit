@@ -10,30 +10,16 @@ fun main(args: Array<String>) {
     """.trimIndent())
 
 
-
     println("1. Masukan Pemain 1: ")
-    val pemainSatu = readLine()
+    val pemainSatu = readLine().toString()
     val suitPemainSatu = SuitPemain()
-
-        suitPemainSatu.aksiPemain(pemainSatu)
+    suitPemainSatu.aksiPemainSatu(pemainSatu)
 
 
     println("2. Masukan Pemain 2: ")
-    val pemainDua = readLine()
+    val pemainDua = readLine().toString()
     val suitPemainDua = SuitPemain()
-    suitPemainSatu.aksiPemain(pemainDua)
-
-
-
-
-
-//    val result : String
-//    println("""
-//        Hasil :
-//        $pemainSatu
-//    """.trimIndent() )
-
-
+    suitPemainDua.aksiPemainDua(pemainDua)
 
 
 }
