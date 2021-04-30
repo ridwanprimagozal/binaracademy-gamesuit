@@ -1,8 +1,9 @@
 package pemain
 
 var seri : String = "DRAW!"
-var menangPlayerSatuTypeA: String ="Pemain 1 MENANG!"
-var menangPlayerSatuTypeB : String ="Pemain 2 MENANG!"
+var menangPlayerSatu: String ="Pemain 1 MENANG!"
+var menangPlayerDua : String ="Pemain 2 MENANG!"
+var isiUlang : String = "Silahkan Suit Ulang"
 
 class SuitPemain() {
 
@@ -13,9 +14,9 @@ class SuitPemain() {
         if (pemainSatu.equals("Gunting",true)) {
             seri
         } else if (pemainSatu.equals("Gunting" ,true)){
-            menangPlayerSatuTypeA
+            menangPlayerSatu
         } else if (pemainSatu.equals("Gunting", true)){
-            menangPlayerSatuTypeB
+            menangPlayerDua
         }
 
     }
@@ -27,7 +28,7 @@ class SuitPemain() {
         } else if (pemainDua.equals("Kertas", true)){
             hasilSuitDraw("PemainSatuMenang")
         } else if (pemainDua.equals("Batu",true)){
-            hasilSuitDraw("PemainSatuMenangVariasi")
+            hasilSuitDraw("PemainDuaMenang")
         }
     }
 
@@ -39,10 +40,10 @@ class SuitPemain() {
                 PemainSatuDuaDraw().pemainSatuDuaDraw()
             }
             "PemainSatuMenang" -> {
-                PemainSatuMenangTypeA().pemainSatuMenangTypeA()
+                PemainSatuMenang().pemainSatuMenang()
             }
-            "PemainSatuMenangVariasi" -> {
-                PemainSatuMenangTypeB().pemainSatuMenangTypeB()
+            "PemainDuaMenang" -> {
+                PemainDuaMenang().pemainDuaMenang()
             }
             else -> {
                 println("tidak ada")

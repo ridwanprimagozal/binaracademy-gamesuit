@@ -1,12 +1,11 @@
 package pemain
 
-class PemainSatuMenangTypeA {
-
-    fun pemainSatuMenangTypeA() {
+class PemainDuaMenang {
+    fun pemainDuaMenang() {
 
         println()
         println("=====================================")
-        println("Hasil: $menangPlayerSatuTypeA")
+        println("Hasil: $menangPlayerDua")
         println("=====================================")
 
     }
